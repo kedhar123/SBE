@@ -13,7 +13,7 @@ function computeRates({ width, height, thickness, type }) {
     const weight1 = ((w + h * 2 + 30) * 2500 * 0.008 * t) / 1000;
     const weight2 = ((w + 30) * 2500 * 0.008 * t) / 1000;
     const finalWeight = weight1 + weight2;
-    const rate = (finalWeight * 66) / 2.5;
+    const rate = (finalWeight * 82) / 2.5;
     finalRate = Math.ceil(rate + 18 + 0.1 * rate + 2);
   } else if (type === "Ladder") {
     const weight1 = ((h + 30) * 2500 * 0.008 * 2 * t) / 1000;
@@ -25,7 +25,7 @@ function computeRates({ width, height, thickness, type }) {
   } else {
     const rate = (w + h * 2) * 2500 * 0.008 * t;
     const updatedRate = rate / 1000;
-    const totalRate = updatedRate * 66;
+    const totalRate = updatedRate * 82;
     const totalRate2 = totalRate / 2.5;
     const totalRate3 = Math.ceil(totalRate2 + 14 + 0.1 * totalRate2);
     finalRate = Math.ceil(totalRate3 + 2);
