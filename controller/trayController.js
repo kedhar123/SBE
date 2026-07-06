@@ -22,7 +22,15 @@ function computeRates({ width, height, thickness, type }) {
     const finalWeight2 = finalWeight * 82;
     const rate = (finalWeight2 + 95) / 2.5;
     finalRate = Math.ceil(rate + 0.1 * rate + 2);
-  } else {
+  } else if (type == "HOT DIP Galvanised") {
+    const weight1 = ((h + 30) * 2500 * 0.008 * 2 * t) / 1000;
+    const weight2 = (65 * w * 0.008 * 10 * t) / 1000;
+    const finalWeight = weight1 + weight2;
+    const finalWeight2 = finalWeight * 135;
+    const rate = (finalWeight2 + 95) / 2.5;
+    finalRate = Math.ceil(rate + 0.03 * rate + 2);
+  }
+  else {
     const rate = (w + h * 2) * 2500 * 0.008 * t;
     const updatedRate = rate / 1000;
     const totalRate = updatedRate * 82;
