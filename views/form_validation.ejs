@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head') %>
+    <title>SBE - Form Validation</title>
+</head>
+<body class="bg-gray-100 p-6">
+    <%- include('partials/nav') %>
+    <div class="max-w-md mx-auto bg-white rounded shadow p-6">
+        <h3 class="text-xl font-semibold mb-4">The Required Cable Tray:</h3>
+        <p class="text-lg mb-2"><span class="font-bold">Width:</span> <%= cable_tray_width %> mm</p>
+        <p class="text-lg mb-2"><span class="font-bold">Height:</span> <%= cable_tray_height %> mm</p>
+        <p class="text-lg mb-4"><span class="font-bold">Thickness:</span> <%= cable_tray_thickness %> mm</p>
+        <p class="text-lg mt-4">
+            <span class="font-bold">Cable Tray Rate:</span>
+            <span class="text-green-700 font-semibold">₹ <%= finalRate %>  GST EXTRA</span>
+        </p>
+        <p class="text-lg mt-4">
+            <span class="font-bold">Cover Cable Tray Rate:</span>
+            <span class="text-green-700 font-semibold">₹ <%= coverRate %>  GST EXTRA</span>
+        </p>
+
+        <div class="flex justify-between mt-6">
+            <a href="/" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Go to Home
+            </a>
+            <a href="/form" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                addCableTray
+            </a>
+        </div>
+    </div>
+</body>
+</html>

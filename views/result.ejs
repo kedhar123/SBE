@@ -1,0 +1,16 @@
+<%- include('partials/head') %>
+<body>
+  <%- include('partials/nav') %>
+  <div class="max-w-md mx-auto bg-white p-6 rounded shadow mt-4">
+    <h3 class="text-xl font-bold mb-2"><%= tray.type.toUpperCase() %> Cable Tray</h3>
+    <p><b>Width:</b> <%= tray.width %> mm</p>
+    <p><b>Height:</b> <%= tray.height %> mm</p>
+    <p><b>Thickness:</b> <%= tray.thickness %> mm</p>
+    <p class="mt-4"><b>Final Rate:</b> ₹ <%= tray.finalRate %> + GST</p>
+    <% if (tray.coverRate) { %>
+      <p><b>Cover Rate:</b> ₹ <%= tray.coverRate %> + GST</p>
+    <% } %>
+    <a href="/form" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded">Add Another</a>
+  </div>
+</body>
+</html>
