@@ -30,10 +30,13 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./frontend/index.html"));
 });
 
-const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-  console.log(`Frontend available at http://localhost:${PORT}`);
-});
+// Only start the server when running locally (not in Vercel serverless)
+if (require.main === module) {
+  const PORT = process.env.PORT || 4000;
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Frontend available at http://localhost:${PORT}`);
+  });
+}
 
 module.exports = app;
