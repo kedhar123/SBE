@@ -19,7 +19,7 @@ function computeRates({ width, height, thickness, type }) {
     const weight1 = ((h + 30) * 2500 * 0.008 * 2 * t) / 1000;
     const weight2 = (65 * w * 0.008 * 10 * t) / 1000;
     const finalWeight = weight1 + weight2;
-    const finalWeight2 = finalWeight * 66;
+    const finalWeight2 = finalWeight * 82;
     const rate = (finalWeight2 + 95) / 2.5;
     finalRate = Math.ceil(rate + 0.1 * rate + 2);
   } else {
