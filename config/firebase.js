@@ -29,9 +29,9 @@ if (serviceAccount) {
   }
 } else {
   console.error("Firebase admin failed to initialize: No credentials provided.");
+  console.error("Set FIREBASE_SERVICE_ACCOUNT env variable or provide key.json");
 }
 
-const db = admin.firestore();
+const db = admin.apps.length ? admin.firestore() : null;
 
 module.exports = db;
-
