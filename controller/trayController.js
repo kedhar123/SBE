@@ -58,7 +58,7 @@ function computeRates({ width, height, thickness, type }) {
     const rate1 = w + (h * 2);
     const rate2 = 1220 / rate1;
     const rate3 = 32 / rate2;
-    const rate4 = (rate3 * 2) *13;
+    const rate4 = (rate3 * 2) *18;
     const rate5= (rate4 / 2.5) + 10 + 0.02;
     finalRate = Math.ceil(rate5)
     
