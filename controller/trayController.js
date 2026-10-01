@@ -50,7 +50,7 @@ function computeRates({ width, height, thickness, type }) {
     finalRate = Math.ceil(totalRate3);
     
     const w1 = ((w + 30) * 2500 * 0.008 * t) / 1000;
-    const w2 = (w1 * 135) / 2.5 + 14;
+    const w2 = (w1 * 145) / 2.5 + 14;
     coverRate = Math.ceil(w2 + 0.12 * w2);    
 
   }
